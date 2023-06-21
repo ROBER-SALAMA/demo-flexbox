@@ -1,0 +1,142 @@
+/*header*/
+.headerPrincipal .container {
+  display: flex; /*se colocan al lado del otro*/
+  align-items: center; /*el elemento se alinia erticalmente*/
+  justify-content: space-between; /*espacio entre lo elemento*/
+}
+
+.headerPrincipal-nav {
+  display: flex;
+}
+
+/*footer input de contacto*/
+.rodapePrincipal-patrocinadores .container {
+  display: flex; /*se colocan al lado del otro, de lado a lado*/
+  justify-content: space-between; /*espacio entre lo elemento*/
+}
+
+/* logos del footer */
+.rodapePrincipal-patrocinadores-list {
+  display: flex; /*se colocan al lado del otro, de lado a lado*/
+  align-items: center; /*sirve para centrarlos verticalmente*/
+  justify-content: space-around; /*espacio equitativo al rededor de los elementos*/
+  width: 70%;
+  margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+  width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+  display: flex;
+}
+
+/* mapa de cursos */
+.rodapePrincipal-navMap-list {
+  display: flex;
+  flex-direction: column; /*elementos en columna*/
+  height: 250px;
+  flex-wrap: wrap; /*cuando llegue a 250px va a pasar a la siguiente columna*/
+}
+
+/* seccion de cursos */
+.contenidoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap; /* si no hay suficiente espacio se coloca en una linea adicional */
+}
+
+.contenidoPrincipal-cursos-link {
+  display: flex;
+  width: 23%;
+}
+
+/* video */
+.videoSobre .container {
+  display: flex;
+}
+
+.videoSobre-sobre {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoSobre-video {
+  flex-grow: 2; /* si hay espacio adicional disponible el elemento crecera mas rapido
+  que los otros elementos */
+  flex-shrink: 2; /* conforme va disminullendo la pantalla va a colocar dos veces menos
+  menor al tamaño del video */
+}
+
+.videoSobre-sobre-list {
+  flex-grow: 2;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    /* navbar */
+  .headerPrincipal .container {
+    flex-direction: column; /*para que deje de ser en linea y se convierta en columna*/
+    align-items: initial; /*los elementos vuelvan a su configuracion de aliniacion predeterminada*/
+    text-align: center;
+  }
+
+  .headerPrincipal-nav {
+    flex-direction: column; /*para que deje de ser en linea y se convierta en columna*/
+  }
+
+  /* seccion de cursos */
+  .contenidoPrincipal-cursos {
+    flex-direction: column; /*para que deje de ser en linea y se convierta en columna*/
+  }
+
+  .contenidoPrincipal-cursos-link {
+    width: 100%;
+  }
+
+  /*mapa de cursos*/
+  .rodapePrincipal-navMap-list {
+    height: auto;
+    flex-wrap: nowrap;
+  }
+
+  /* footer */
+  .rodapePrincipal-patrocinadores .container {
+    flex-direction: column;
+  }
+
+  .rodapePrincipal-contatoForm {
+    width: 100%;
+  }
+
+  .rodapePrincipal-patrocinadores-list {
+    align-items: initial;
+    width: 100%;
+    margin: 0;
+  }
+
+  .rodapePrincipal-contatoForm-fieldset {
+    justify-content: center;
+  }
+
+  /* navbar */
+  .headerPrincipal-nav-link-app {
+		order: -1;
+	}
+
+    /* seccion de video */
+	.videoSobre .container {
+		flex-direction: column;
+	}
+
+    .headerPrincipal-nav-link-app {
+		order: -1;
+	}
+
+    /* seccion de video */
+	.videoSobre .container {
+		flex-direction: column;
+	}
+
+}
